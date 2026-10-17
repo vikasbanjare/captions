@@ -388,3 +388,109 @@ accents:      punchIn=5%/250ms, brollSlide=400ms, stickerPop=250ms/easeOutBack
 - Colours are read off compressed previews; use the `colorPresets` hex values from the catalog JSON where they exist (most premium styles list five).
 - Preview clips for the "basic" tier are rendered captions on a flat background, so their placement (dead centre in 16:9) is not representative of in-app output.
 - Fonts are identified by appearance only; no font files or CSS were available.
+
+---
+
+## Part 3 — The other 33 premium styles (compact specs)
+
+Second pass, 2026-10-17. Same method as Part 1 (first 4 s at 10 fps on a contact sheet), one line per style. "Append" = words are added as spoken with layout fixed; "fill" = whole chunk laid out, words activate; "whole" = chunk appears at once. Positions are the measured band centre from `measurements.csv`.
+
+| Style | Ratio | y % | Caption font / case | Reveal | Emphasis | Box / stroke | Signature accent |
+|---|---|---|---|---|---|---|---|
+| Align | 9:16 | 59 | Monospace, ALL CAPS, black on white box once on footage | append | none | white box, square corners | Opens on a white card: mono title "COMPUTERS" top, subtitle letters scramble in; footage fades under |
+| Analog | 9:16 | 47 | Rounded heavy sans, white, lower case | append, each word rises 4 px + fades (~100 ms) | size (keyword 1.3×) | none, soft shadow | Green ✦ star cluster pops on the speaker; cut to full white card with green "STRENGTHENING"; fade out/in 250 ms |
+| Archive | 9:16 / 16:9 | 64 / 53 | Condensed bold, ALL CAPS, white | **fill, inactive words hollow (stroke only)** then fill solid | none | none | Hollow-outline inactive state is the only one of its kind; 2–3 word stacks |
+| Bloom | 9:16 | 67 | Rounded sans, lower case, small | append | size (keyword 1.4×) | none | Arch-shaped (rounded top) mask around speaker; serif "MOISTURIZE" + script "Routine" title |
+| Blueprint | 9:16 | 69 | Grotesk, ALL CAPS, white | fill, inactive grey; **active word gets an underline that draws left→right** | underline | none | Graph-paper background; footage window scales in from a point (~500 ms) with blue selection handles; hollow blue "INTRODUCING" title |
+| Byline | 9:16 / 16:9 | 65 / 81 | Grotesk, sentence case, small | whole, fade ~100 ms | size on single-word chunks | none | Split-screen grid, black-and-white B-roll tiles sliding in |
+| Cinematic II | 9:16 | 73 | Serif, yellow (#F4C542) | whole | none | 1 px stroke | Film-reel slit open, sprocket-hole frame overlay, light leaks, rainbow flare |
+| Core | 9:16 | 69 | Grotesk regular, white | append, second line appended below | **red** (#E8302A) keyword | none | Thin red rule at top; hatched "blueprint" title box; grid lines |
+| Evo | 9:16 | 73 (title) / 12 (caption) | Grotesk; caption small at top of card | append, blur-in per word | bold italic + 1.3× | none | Speaker inside a blue-gradient rounded frame; huge bold italic "THE KEYS TO INVESTING" at bottom; later the frame floats over a holographic gradient with B-roll cards |
+| Film | 9:16 | 67 | Serif, yellow, small | whole | none | none | Black rounded border; yellow condensed "MEMORIES" types on letter by letter (~5 frames) with glitch jitter |
+| Focus | 9:16 | 70 | Grotesk, small, lower case | fill; **active word gets a solid white box** (black text) that jumps word to word | box | white box on active word only | Solid blue (#2F55FF) band slides up from the bottom (~300 ms) carrying a big "FOLLOWERS"; later stacked blue panels wipe through |
+| Growth | 9:16 | 50 | Grotesk bold, ALL CAPS, white, 2 lines | whole | **red** single-word chunk at 1.6× | none | Red rectangular outline scales around the speaker; black grid stage with B-roll strip |
+| Kai | 9:16 | 52 | Rounded sans, lower case | append; **active word gets a green→blue gradient pill** | gradient pill | pill on active word | Background blurs 8 px on hook; arch mask; gradient backdrop; ✦ sparkle |
+| Lens | 9:16 | 65 | Monospace, ALL CAPS, left-aligned in black bar | append inside a pre-sized bar | none | black bar | Camera HUD frame with exposure readout; orange "Aperture" types on letter by letter; footage scales in from a point; light leak |
+| Lift | 9:16 | 74 | Grotesk, lower case | append; **active word in mint pill** (#5FD39A), inactive 60 % | pill | pill on active word | Mint diagonal panel wipes in from top-right (~300 ms); serif "Your Team" title |
+| Linen | 9:16 | 73 | Serif italic, dark on pale-pink pill | whole, fade ~100 ms | none | pill #F3DDD0, radius 4 px | Serif "WEAR" + italic "your style" title; cream diagonal panel with "Just dropped" |
+| Lumen | 9:16 | 68 | Grotesk, white on dark-brown bar | append, left-aligned in a **pre-sized full-width bar** | none | bar #3D332E, no radius | Paper-grid background; footage in rounded rect scales in; small serif "Vision" label |
+| Magazine | 9:16 | 48 | Grotesk, white, sentence case | append; active word flashes **purple → white** (~130 ms) | colour flash | none | Speaker in a letterboxed photo frame over grey; script "Scrolling" types on; polaroid collage with black pill + yellow keyword |
+| Neon | 9:16 | 70 | Rounded sans, white, two lines | append | **pink glow** keyword (#FF4FD8) | none | Neon-sign collage (pink/blue/green) flickers on around the speaker; script neon title |
+| Orbit | 9:16 | 68 | Serif italic, white on blue pill | whole; pill scales 0.9→1 (~150 ms) and resizes to the text | italic keyword | pill #2F5BBF, radius full | Condensed "FRIENDS" slides in from the top and holds |
+| Pulse (premium) | 9:16 | 60 | Condensed bold, ALL CAPS, white + cyan | **line stack**, blur-in per line | cyan (#19C6FF) line | cyan glow | Dark grid of rounded tiles; footage tile scales in; HUD feel |
+| Rebel | 9:16 | 64 | Serif, yellow/white on black label | append | yellow keyword | black label | Yellow spray-paint strokes and crown; halftone speech-bubble collage; ransom-note rotated labels |
+| Rocket | 9:16 | 60 | Rounded condensed, ALL CAPS, white | append, inactive lavender | lavender → white | none | Diagonal light-streak wipes; chromatic lens-blur transition; small "INDIE COMEBACK" title grows |
+| Sketch | 9:16 | 64 | Handwritten marker, white | append | none | later: dark strike-through bar | "MIND MAP" title with a hand-drawn ellipse scribbled on (~250 ms); marker scribble boxes |
+| Stack | 9:16 | 67 | Rounded sans, mixed size | append; keywords in **red pills** (#E8392E), plain words small white | pill + size | pill on keywords | Two-tone "TECHNOLOGY" title; footage in rounded rect; white flash transitions |
+| Story | 9:16 / 16:9 | 54 / 77 | Serif, white | append | **yellow italic** keyword | none (white pill on B-roll) | Serif "Mentoring" title fades in top-left; B-roll gets a white pill caption |
+| Vinyl II | 9:16 | 65 | Grotesk, dark on cream box | append inside pre-sized box | **orange** keyword (#FF4A1C) | cream box, square | Orange bands top and bottom with repeated "AUTHENTIC" letters scrambling in; bands slide in/out |
+| Vista | 9:16 | 67 | Serif, white, small | append | none | none | Large hollow serif "REALTY" title; grey stepped geometric panels; triangle-pattern transition |
+| Zine | 9:16 | 62 | Handwritten italic, ALL CAPS, white | append, two lines | none | none | Paper-cutout blue cloud with bold "DIY ZINES"; doodles; scissors cut-out |
+| Paper | 16:9 | 83 | Rounded sans in white pill | fill (active dark, inactive grey) | weight | pill, radius full | Serif "parallel play" title with offset drop shadow; torn-paper blue panel with black label + sticker |
+| Prism Pro | 16:9 | 55 | As 9:16 (top-left stack) | fill | bold italic gradient keyword | none | Same as 9:16; title block sits lower in the frame |
+| Elevate / Recess / Sonnet / Volt / Ignite | other ratio | see CSV | as Part 1 | as Part 1 | as Part 1 | as Part 1 | Orientation siblings; only placement changes |
+
+### New mechanisms surfaced by this pass (add to Pattern D and E)
+
+| Mechanism | Styles | Parameters |
+|---|---|---|
+| **Moving highlight box** on the active word | Focus (white box), Lift (mint pill), Kai (gradient pill), Stack (red pill on keywords only) | box fits the word with 0.3em × 0.15em padding; jumps (no tween) to the next word on its start; inactive words 60 % opacity |
+| **Hollow inactive words** | Archive | 2 px stroke, no fill → solid fill on activation, 80 ms |
+| **Underline draw** | Blueprint | 3 px rule under the active word, wipes left→right over ~130 ms |
+| **Pre-sized bar, left-aligned fill** | Grit, Lumen, Lens, Vinyl II | bar appears first at final width (blur 6 px→0, 60 ms), then words cut on |
+| **Type-on titles** | Film, Lens, Magazine, Paper II, Chalk | 40 ms per character, optional 1-frame glitch jitter |
+| **Letter scramble-in titles** | Align, Vinyl II | random glyphs resolve left→right over ~300 ms |
+| **Footage scales in from a point** | Blueprint, Lens, Lumen, Pulse | scale 0→1 over 400–500 ms `easeOutBack`, with selection-handle or HUD frame |
+
+---
+
+## Part 4 — Basic caption presets (`caption-styles` endpoint)
+
+`GET https://internal.captions-api.com/studio-go/caption-styles?pageSize=100` returns 67 flat caption presets (saved in `caption-styles.json` / `caption-styles.md`). 47 of them also appear in `ai-edit-styles.json` tagged `basic`; 20 exist only here (Baseline, Chronicle, Closed Cap, Daily Mail, Doodle, Eclipse, Energy II, Flair, Footprint v3, Fuel, Garnet, Helios, Hustle v3, Lilac, Linear, Minima, Note, Poem, Scene, Script).
+
+Each preset carries a 4-slot `colors` array. Reading eight previews against their arrays:
+
+| Slot | Meaning (inferred) | Evidence |
+|---|---|---|
+| 0 | Base text fill | white in 66 of 67 presets |
+| 1 | Active / emphasis word colour | Heat `#FF0000` = red "Hey,"; Pulse `#14C7FF` = cyan line; Aries/Dimidium `#F7CE45`/`#FEF894` = yellow "HEAR" |
+| 2 | Stroke, shadow or container | `#000000` where a dark stroke/shadow shows (Aries, Dimidium, Marigold); `#999999` on Heat = upcoming-word grey; `#1E89FE` on Messages = blue bubble |
+| 3 | Glow or secondary accent | Marigold `#FDE300` yellow glow; Messages `#9AD14B` = alternate green bubble; often repeats slot 0 or 1 |
+
+Caveat: container backgrounds are not always in the array (Dimidium's purple box is not listed), so treat slot 2/3 as "secondary colours the renderer may use" rather than a strict schema.
+
+Preview behaviour (all 67 are 1920×1080 at 32 fps, 4.9 s, flat `#1A1D1F` background, same script "Hey, did you hear about the bakery in…"):
+
+- 44 of 56 confidently measured presets reveal **whole chunks**; 12 reveal **word by word** (Aries, Baseline, Cove, Eclipse, Energy II, Marigold and six more).
+- Median chunk hold **1.09 s** (IQR 0.81–1.62 s), roughly twice the premium styles, because the previews are rendered at a slower reading pace.
+- Median entrance **47 ms** (1–3 frames): basic presets mostly cut on. The exceptions that animate for ~500 ms are Alcyone, Arion Pink and Cartwheel Purple (scale/bounce).
+- Band centre median **47 %**: dead centre, not representative of in-app placement.
+
+---
+
+## Part 5 — Measured values (`measurements.csv`, `tools/measure_captions.py`)
+
+Method: every preview decoded at native fps, scaled to 360 px wide. "Text" = pixels that are bright or saturated and have strong 7 px local contrast. The densest 12 %-high band in the lower 60 % of frame (whole frame for 16:9) is the caption band. A **chunk boundary** is a frame where the band mask keeps < 25 % overlap with the previous frame while the footage under the band did not cut; a **word event** keeps 50–90 % overlap and grows the mask by > 20 %. Entrance = frames after a boundary until the band stops changing (> 6 % per frame), capped at 0.5 s.
+
+| Group | n | Band y % median (IQR) | Chunk hold s median (IQR) | Entrance ms median (IQR) | Word-by-word styles |
+|---|---|---|---|---|---|
+| Premium 9:16 | 45 | **67.4** (64.2–69.8) | **0.53** (0.38–0.82) | **208** (102–468) | 3 (Orbit, Sonnet 9:16, Zine) |
+| Premium 16:9 | 12 | **77.0** (69.7–80.3) | 0.65 (0.47–0.78) | 178 (83–354) | 0 |
+| Basic presets | 56 | 47.2 (41.7–50.0) | 1.09 (0.81–1.62) | 47 (31–101) | 12 |
+
+What this corrects in Parts 1–2:
+
+- **Anchor y for 9:16 is 67 %, not 72 %.** The eyeballed 72 % was biased by the few styles with pills; the measured band centre across 45 styles is 67 % with a tight IQR. Use 66–70 % as the default range and 1450–1600 px as the SOP-safe zone check.
+- **Chunk holds are shorter than estimated**: median 0.53 s in 9:16 previews, with a floor around 0.28 s (Paper II, Lumen). The 350 ms minimum in Pattern A stands.
+- **Entrances are bimodal.** About half the 9:16 styles settle within 100 ms (cut or 2-frame fade). The other half register 350–500 ms, which is not a longer fade: it is the word-append styles, where the band keeps changing for the length of the chunk. For whole-chunk styles the 80–150 ms blur-pop in Pattern C holds; for append styles use per-word cut-ons.
+- Word-by-word detection undercounts: the detector classifies most append styles as "chunk" because each appended word changes the mask by less than the 20 % growth threshold on long lines. The visual pass (Parts 1 and 3) is authoritative for reveal mode; the CSV is authoritative for placement and hold.
+
+Columns in `measurements.csv`: `file, w, h, fps, dur_s, band_conf` (fraction of frames with a detected band; trust rows ≥ 0.8), `band_y_pct, band_y_iqr_pct, chunks, word_events, word_events_per_s, reveal, chunk_hold_med_s, chunk_hold_min_s, entrance_med_frames, entrance_med_ms, entrance_p90_ms, accents` (up to three quantised accent colours seen inside the band).
+
+Low-confidence rows to ignore: Prism Pro 9:16 (captions at top of frame), Poem, Growth, Heat, Alhena (dark or scripted text the mask misses), Cartwheel Black, Cygnus A, Drive, Million, Monster, Orion, Scene.
+
+Run it again with:
+
+```bash
+python3 -I tools/measure_captions.py previews/*.mp4 previews/caption-styles/*.mp4 --out measurements.csv
+```

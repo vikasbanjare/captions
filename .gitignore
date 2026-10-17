@@ -1,3 +1,4 @@
 previews/*.mp4
 frames/
 .DS_Store
+previews/**/*.mp4
